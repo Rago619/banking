@@ -4,13 +4,7 @@ import (
 	"net/http"
 )
 
-type Customer struct {
-	Name    string `json:"full_name" xml:"fname"`
-	City    string `json:"city_name" xml:"cname"`
-	Zipcode string `json:"pin_code" xml:"pin"`
-}
-
-func main() {
+func Start() {
 	//APPLICATION LOGIC : Code which helps in starting our application
 	//defining all the routes to the http server
 
@@ -19,7 +13,7 @@ func main() {
 
 	//starting the http server
 	err := http.ListenAndServe("localhost:9080", nil) //starts the server on port 9080 and second parameter is handler function. here default mux is used. so nil.
-	if err != nil {
+	if err != nil {                                   //if there is an error present, print the error
 		println(err.Error())
 	}
 }
