@@ -1,4 +1,4 @@
-package domain
+package domain //DEFINING STUB ADAPTER
 
 type CustomerRepositoryStub struct {
 	customers []Customer
